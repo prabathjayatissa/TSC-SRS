@@ -1,0 +1,7 @@
+event_id,scenario_id,hazard_type,start_day,end_day,start_date,end_date_exclusive,latitude,longitude,intensity_metric,intensity,unit,parent_event_id,event_group_id,observed_day,uncertainty
+E1,compound,earthquake,90,91,2027-04-01,2027-04-02,24.7,121.1,PGA,0.3,g,,G1,90,scenario_not_probability
+E2,compound,tsunami,91,92,2027-04-02,2027-04-03,25.2,121.8,inundation_depth,1.5,m,E1,G1,91,scenario_not_probability
+E3,compound,typhoon,210,215,2027-07-30,2027-08-04,24.9,121.6,maximum_wind,45,m/s,,G2,209,scenario_not_probability
+E4,compound,extreme_rain,214,217,2027-08-03,2027-08-06,24.9,121.4,daily_rainfall,240,mm/day,E3,G2,214,scenario_not_probability
+E5,compound,landslide,215,223,2027-08-04,2027-08-12,24.95,121.35,blocked_road_length,0.5,km,E4,G2,215,scenario_not_probability
+E6,compound,heat,230,242,2027-08-19,2027-08-31,19.4,-99.1,daily_max_temperature,42,C,,E6,229,scenario_not_probability

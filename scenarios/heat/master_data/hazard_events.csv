@@ -1,0 +1,2 @@
+event_id,scenario_id,hazard_type,start_day,end_day,start_date,end_date_exclusive,latitude,longitude,intensity_metric,intensity,unit,parent_event_id,event_group_id,observed_day,uncertainty
+E6,heat,heat,230,242,2027-08-19,2027-08-31,19.4,-99.1,daily_max_temperature,42,C,,E6,229,scenario_not_probability

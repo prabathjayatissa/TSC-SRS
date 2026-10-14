@@ -1,0 +1,1 @@
+event_id,scenario_id,hazard_type,hazard_subtype,start_day,end_day,start_date,end_date_exclusive,latitude,longitude,intensity_metric,intensity,unit,parent_event_id,event_group_id,observed_day,uncertainty

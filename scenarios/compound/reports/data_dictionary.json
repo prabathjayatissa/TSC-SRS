@@ -1,0 +1,266 @@
+{
+  "scenarios": {
+    "kind": "input",
+    "rows": 1,
+    "columns": [
+      "scenario_id",
+      "seed",
+      "days",
+      "start_date",
+      "parameter_status"
+    ]
+  },
+  "suppliers": {
+    "kind": "input",
+    "rows": 1,
+    "columns": [
+      "supplier_id",
+      "name",
+      "country"
+    ]
+  },
+  "nodes": {
+    "kind": "input",
+    "rows": 16,
+    "columns": [
+      "node_id",
+      "node_type",
+      "country",
+      "latitude",
+      "longitude",
+      "supplier_id",
+      "daily_handling_units",
+      "power_dependency",
+      "water_dependency",
+      "coordinate_status"
+    ]
+  },
+  "products": {
+    "kind": "input",
+    "rows": 18,
+    "columns": [
+      "sku_id",
+      "product_level",
+      "uom",
+      "units_per_pack",
+      "weight_kg",
+      "volume_m3",
+      "unit_value",
+      "substitution_group",
+      "handling_class"
+    ]
+  },
+  "bill_of_materials": {
+    "kind": "input",
+    "rows": 15,
+    "columns": [
+      "parent_sku",
+      "component_sku",
+      "quantity_per"
+    ]
+  },
+  "factory_products": {
+    "kind": "input",
+    "rows": 18,
+    "columns": [
+      "factory_id",
+      "output_sku",
+      "capacity_per_day",
+      "priority"
+    ]
+  },
+  "initial_inventory": {
+    "kind": "input",
+    "rows": 90,
+    "columns": [
+      "factory_id",
+      "sku_id",
+      "quantity"
+    ]
+  },
+  "inventory_policies": {
+    "kind": "input",
+    "rows": 90,
+    "columns": [
+      "factory_id",
+      "sku_id",
+      "target_units",
+      "review_interval_days",
+      "expedite_trigger_units"
+    ]
+  },
+  "transport_links": {
+    "kind": "input",
+    "rows": 21,
+    "columns": [
+      "link_id",
+      "from_node",
+      "to_node",
+      "mode",
+      "transit_days",
+      "daily_capacity_units",
+      "departure_interval_days",
+      "cost_per_unit"
+    ]
+  },
+  "routes": {
+    "kind": "input",
+    "rows": 12,
+    "columns": [
+      "route_id",
+      "factory_id",
+      "route_type",
+      "activation_days"
+    ]
+  },
+  "route_legs": {
+    "kind": "input",
+    "rows": 48,
+    "columns": [
+      "route_id",
+      "sequence",
+      "link_id"
+    ]
+  },
+  "demand_orders": {
+    "kind": "input",
+    "rows": 13140,
+    "columns": [
+      "demand_id",
+      "day",
+      "date",
+      "factory_id",
+      "output_sku",
+      "quantity"
+    ]
+  },
+  "hazard_events": {
+    "kind": "input",
+    "rows": 6,
+    "columns": [
+      "event_id",
+      "scenario_id",
+      "hazard_type",
+      "start_day",
+      "end_day",
+      "start_date",
+      "end_date_exclusive",
+      "latitude",
+      "longitude",
+      "intensity_metric",
+      "intensity",
+      "unit",
+      "parent_event_id",
+      "event_group_id",
+      "observed_day",
+      "uncertainty"
+    ]
+  },
+  "asset_impacts": {
+    "kind": "input",
+    "rows": 11,
+    "columns": [
+      "impact_id",
+      "event_id",
+      "asset_id",
+      "start_day",
+      "end_day_exclusive",
+      "capacity_multiplier",
+      "reason"
+    ]
+  },
+  "purchase_orders": {
+    "kind": "output",
+    "rows": 9411,
+    "columns": [
+      "order_id",
+      "supplier_id",
+      "factory_id",
+      "sku_id",
+      "quantity",
+      "order_day",
+      "ready_day",
+      "requested_receipt_day",
+      "route_id",
+      "dispatched_day"
+    ]
+  },
+  "shipments": {
+    "kind": "output",
+    "rows": 9321,
+    "columns": [
+      "shipment_id",
+      "order_id",
+      "factory_id",
+      "sku_id",
+      "quantity",
+      "route_id",
+      "dispatch_day",
+      "received_day"
+    ]
+  },
+  "shipment_legs": {
+    "kind": "output",
+    "rows": 36819,
+    "columns": [
+      "shipment_id",
+      "sequence",
+      "link_id",
+      "departure_day",
+      "arrival_day",
+      "quantity"
+    ]
+  },
+  "inventory_transactions": {
+    "kind": "output",
+    "rows": 73769,
+    "columns": [
+      "transaction_id",
+      "day",
+      "factory_id",
+      "sku_id",
+      "quantity_delta",
+      "transaction_type",
+      "reference_id"
+    ]
+  },
+  "inventory_snapshots": {
+    "kind": "output",
+    "rows": 65700,
+    "columns": [
+      "day",
+      "factory_id",
+      "sku_id",
+      "on_hand"
+    ]
+  },
+  "production_actuals": {
+    "kind": "output",
+    "rows": 13140,
+    "columns": [
+      "day",
+      "factory_id",
+      "output_sku",
+      "new_demand",
+      "produced",
+      "backlog",
+      "capacity",
+      "material_limited"
+    ]
+  },
+  "decisions": {
+    "kind": "output",
+    "rows": 9411,
+    "columns": [
+      "decision_id",
+      "day",
+      "factory_id",
+      "sku_id",
+      "order_id",
+      "observed_inventory",
+      "observed_pipeline",
+      "action",
+      "reason"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+impact_id,event_id,asset_id,start_day,end_day_exclusive,capacity_multiplier,reason
+I001,E1,S1,90,93,0,inspection_and_power
+I002,E1,S1,93,98,0.4,restart
+I003,E1,S1,98,103,0.75,ramp_up
+I004,E2,TWP,91,96,0,synthetic_coastal_closure
+I005,E2,TWP,96,102,0.5,recovery
+I006,E3,TWP,210,215,0,port_closure
+I007,E3,TWA,210,213,0,airport_closure
+I008,E3,L_DP,210,217,0.4,road_restriction
+I009,E5,L_DP,215,223,0,road_blockage
+I010,E5,L_DA,215,219,0.5,shared_access_constraints
+I011,E6,F4,230,242,0.55,heat_reduced_productivity

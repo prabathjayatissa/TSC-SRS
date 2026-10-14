@@ -1,0 +1,4 @@
+impact_id,event_id,asset_id,start_day,end_day_exclusive,capacity_multiplier,reason
+I001,E3,TWP,210,215,0,port_closure
+I002,E3,TWA,210,213,0,airport_closure
+I003,E3,L_DP,210,217,0.4,road_restriction

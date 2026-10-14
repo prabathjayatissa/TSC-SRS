@@ -1,0 +1,3 @@
+impact_id,event_id,asset_id,start_day,end_day_exclusive,capacity_multiplier,reason
+I001,E5,L_DP,215,223,0,road_blockage
+I002,E5,L_DA,215,219,0.5,shared_access_constraints

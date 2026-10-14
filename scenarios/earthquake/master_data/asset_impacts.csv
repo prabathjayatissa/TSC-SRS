@@ -1,0 +1,6 @@
+impact_id,event_id,asset_id,start_day,end_day_exclusive,capacity_multiplier,reason
+I001,E1,S1,90,93,0,inspection_and_power
+I002,E1,S1,93,98,0.4,restart
+I003,E1,S1,98,103,0.75,ramp_up
+I004,E2,TWP,91,96,0,synthetic_coastal_closure
+I005,E2,TWP,96,102,0.5,recovery

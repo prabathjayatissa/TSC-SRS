@@ -1,0 +1,6 @@
+# Runtime dependencies for TSC-SRS
+# The simulation engine and validation layer use only the Python standard library.
+# These packages are required only for the interactive dashboard.
+streamlit>=1.40
+pandas>=2.0
+altair>=5.0

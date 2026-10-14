@@ -1,0 +1,8 @@
+{
+  "scenario_id": "baseline",
+  "seed": 42,
+  "simulation_days": 730,
+  "start_date": "2027-01-01",
+  "parameter_status": "fictional_not_calibrated",
+  "created_utc": "2026-10-14T12:38:16+00:00"
+}

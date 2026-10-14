@@ -1,0 +1,21 @@
+{
+  "scenarios": [
+    "baseline",
+    "earthquake",
+    "typhoon",
+    "landslide",
+    "heat",
+    "compound"
+  ],
+  "runs": {
+    "baseline": "run_20261014T123816Z_42",
+    "earthquake": "run_20261014T123822Z_42",
+    "typhoon": "run_20261014T123828Z_42",
+    "landslide": "run_20261014T123834Z_42",
+    "heat": "run_20261014T123839Z_42",
+    "compound": "run_20261014T123845Z_42"
+  },
+  "seed": 42,
+  "days": 730,
+  "start_date": "2027-01-01"
+}

@@ -1,0 +1,2 @@
+event_id,scenario_id,hazard_type,start_day,end_day,start_date,end_date_exclusive,latitude,longitude,intensity_metric,intensity,unit,parent_event_id,event_group_id,observed_day,uncertainty
+E3,typhoon,typhoon,210,215,2027-07-30,2027-08-04,24.9,121.6,maximum_wind,45,m/s,,G2,209,scenario_not_probability

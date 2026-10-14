@@ -1,0 +1,3 @@
+event_id,scenario_id,hazard_type,start_day,end_day,start_date,end_date_exclusive,latitude,longitude,intensity_metric,intensity,unit,parent_event_id,event_group_id,observed_day,uncertainty
+E4,landslide,extreme_rain,214,217,2027-08-03,2027-08-06,24.9,121.4,daily_rainfall,240,mm/day,,G2,214,scenario_not_probability
+E5,landslide,landslide,215,223,2027-08-04,2027-08-12,24.95,121.35,blocked_road_length,0.5,km,E4,G2,215,scenario_not_probability

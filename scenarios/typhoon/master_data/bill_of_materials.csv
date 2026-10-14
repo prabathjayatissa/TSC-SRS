@@ -1,0 +1,16 @@
+parent_sku,component_sku,quantity_per
+P1,C01,2
+P1,C04,1
+P1,C07,1
+P1,C10,1
+P1,C13,1
+P2,C02,2
+P2,C05,1
+P2,C08,1
+P2,C11,1
+P2,C14,1
+P3,C03,2
+P3,C06,1
+P3,C09,1
+P3,C12,1
+P3,C15,1
