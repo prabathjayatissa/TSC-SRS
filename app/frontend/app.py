@@ -20,12 +20,16 @@ st.set_page_config(
 
 pages = {
     "Analysis": [
+        st.Page("app_pages/impact.py", title="Impact analysis",
+                icon=":material/insights:", default=True),
+        st.Page("app_pages/forecast.py", title="Resilience forecast",
+                icon=":material/online_prediction:"),
         st.Page("app_pages/dashboard.py", title="Dashboard",
-                icon=":material/dashboard:", default=True),
+                icon=":material/dashboard:"),
         st.Page("app_pages/results.py", title="Results & comparison",
                 icon=":material/compare_arrows:"),
-        st.Page("app_pages/network.py", title="Network & logistics",
-                icon=":material/route:"),
+        st.Page("app_pages/network.py", title="World map",
+                icon=":material/public:"),
     ],
     "Configuration": [
         st.Page("app_pages/master_data.py", title="Master data",

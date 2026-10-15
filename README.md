@@ -23,6 +23,7 @@ SAP/
 │   ├── procurement.py          # replenishment policy and order planning
 │   ├── logistics.py            # capacities, shipment advancement, dispatch
 │   ├── metrics.py              # KPI / summary calculation (SRS §10)
+│   ├── whatif.py               # perturbation + Monte-Carlo what-if projections
 │   └── storage.py              # scenario folders + run manifests (SRS §9)
 ├── validation/                 # data-integrity layer (SRS §5)
 │   ├── schema.py               # required columns and value ranges
@@ -32,7 +33,9 @@ SAP/
 ├── app/frontend/               # Streamlit dashboard (SRS §7 screens)
 │   ├── app.py                  # entry point (st.navigation)
 │   ├── common.py               # shared data access + chart helpers
-│   └── app_pages/              # Dashboard · Results · Network · Master data ·
+│   ├── analysis.py             # comparison, insight, forecast & map analysis
+│   └── app_pages/              # Impact analysis · Resilience forecast · Dashboard ·
+│                               # Results · World map · Master data ·
 │                               # Scenario designer · Data explorer
 ├── scenarios/                  # scenario configuration, outputs and reports
 │   └── <scenario_id>/
@@ -98,12 +101,24 @@ summary, inputs, outputs = engine.run_scenario("compound", days=730, seed=42)
 
 | Screen | Purpose |
 |--------|---------|
+| Impact analysis | Baseline vs compound KPIs, inventory/delay/production/backlog/cost charts, data-backed explanations of each disruption mechanism |
+| Resilience forecast | Parameterised what-if projections (asset, window, capacity/demand multipliers) with stated assumptions, seed-based uncertainty bands and download |
 | Dashboard | KPIs, demand/production/backlog, inventory, constraint source, disruption timeline |
 | Results & comparison | Cross-scenario KPI comparison, time-series overlay, CSV/JSON exports |
-| Network & logistics | Node map, link capacities and routes with leg sequences |
+| World map | deck.gl map of suppliers, factories, hubs, ports and routes with filters for scenario, time, factory, product, mode, country and node type; disruption overlay |
 | Master data | Products, BOM, inventory policies, initial inventory |
 | Scenario designer | Parameters, hazard events/impacts, capacity heatmap, in-process re-run |
 | Data explorer | Browse and download every input and output table |
+
+### Predictions and uncertainty
+
+The **Resilience forecast** screen runs the deterministic engine under an explicit
+perturbation (capacity multiplier on a chosen asset for a chosen window, optional
+demand multiplier) and repeats it across several seeds of the stochastic demand
+stream. Reported bands are **model uncertainty across seeds only** — they do not
+represent hazard probability, calibrated parameter error, or structural change.
+Every projection is labelled *"if this happens"*, not *"the probability that this
+happens"*.
 
 ## Tests
 
